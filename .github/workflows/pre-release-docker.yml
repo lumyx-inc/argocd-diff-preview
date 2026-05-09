@@ -18,7 +18,7 @@ jobs:
     strategy:
       fail-fast: true
       matrix:
-        platform: [amd64, arm64]
+        platform: [amd64]
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -88,5 +88,4 @@ jobs:
         run: |
           docker buildx imagetools create -t \
             ${IMAGE}:${{ env.VERSION }}-${{ env.SHA }} \
-            ${IMAGE}:${{ env.VERSION }}-${{ env.SHA }}-amd64 \
-            ${IMAGE}:${{ env.VERSION }}-${{ env.SHA }}-arm64
+            ${IMAGE}:${{ env.VERSION }}-${{ env.SHA }}-amd64
