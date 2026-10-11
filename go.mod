@@ -3,7 +3,7 @@ module github.com/dag-andersen/argocd-diff-preview
 go 1.27.2
 
 require (
-	github.com/argoproj/argo-cd/v3 v3.5.3
+	github.com/argoproj/argo-cd/v3 v3.5.4
 	github.com/go-git/go-git/v5 v5.19.2
 	github.com/go-logr/logr v1.4.4
 	github.com/google/uuid v1.6.1-0.20241114170450-2d3c2a9cc518
