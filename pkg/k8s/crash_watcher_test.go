@@ -4,12 +4,11 @@ import (
 	"testing"
 
 	corev1 "k8s.io/api/core/v1"
-	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 )
 
 func makePod(name string, containerStatuses []corev1.ContainerStatus, initContainerStatuses []corev1.ContainerStatus) corev1.Pod {
 	return corev1.Pod{
-		ObjectMeta: metav1.ObjectMeta{Name: name},
+		Name: name,
 		Status: corev1.PodStatus{
 			ContainerStatuses:     containerStatuses,
 			InitContainerStatuses: initContainerStatuses,
